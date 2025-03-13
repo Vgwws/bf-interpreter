@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <bf.h>
 void exec(char* cmd){
   signed char* arr = calloc(30000, 1);
   int i = 0;
@@ -74,29 +75,4 @@ void exec(char* cmd){
     exit(1);
   }
   free(arr);
-}
-int main(int argc, char** argv){
-  if(argc != 2){
-    fprintf(stderr, "No input file\n");
-    return 1;
-  }
-  FILE* file = fopen(argv[1], "r");
-  if(!file){
-    fprintf(stderr, "Can't open file\n");
-    return 1;
-  }
-  fseek(file, 0, SEEK_END);
-  long length = ftell(file);
-  rewind(file);
-  char* buffer = malloc(length + 1);
-  if(!buffer){
-    fprintf(stderr, "Can't allocate memory for buffer\n");
-    return 1;
-  }
-  fread(buffer, 1, length, file);
-  buffer[length] = '\0';
-  fclose(file);
-  exec(buffer);
-  free(buffer);
-  return 0;
 }

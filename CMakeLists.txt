@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(bf-interpreter C)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED True)
+set(SOURCES src/main.c src/bf.c)
+add_executable(bf ${SOURCES})
+install(TARGETS bf DESTINATION /usr/bin)
