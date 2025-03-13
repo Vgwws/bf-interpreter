@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <bf.h>
+#include "bf.h"
 int main(int argc, char** argv){
   if(argc != 2){
     fprintf(stderr, "No input file\n");
@@ -21,7 +21,7 @@ int main(int argc, char** argv){
     return EXIT_FAILURE;
   }
   fread(buffer, 1, length, file);
-  code[length] = '\0';
+  buffer[length] = '\0';
   fclose(file);
   exec(buffer);
   free(buffer);

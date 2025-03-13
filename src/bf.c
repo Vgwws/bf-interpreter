@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <bf.h>
+#include "bf.h"
 void exec(char* cmd){
   signed char* arr = calloc(30000, 1);
   int i = 0;

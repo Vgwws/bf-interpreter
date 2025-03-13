@@ -1,4 +1,4 @@
 #ifndef BF_H
-#ifndef BF_H
+#define BF_H
 void exec(char* cmd);
-#endif
+#endif // BF_H
