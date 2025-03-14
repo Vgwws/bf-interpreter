@@ -11,3 +11,7 @@ A Brainfuck interpreter written in C
    cmake ..
    make
    ```
+   3. Install it
+   ```sh
+   sudo make install
+   ```

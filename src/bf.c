@@ -2,8 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "bf.h"
-void exec(char* cmd){
-  signed char* arr = calloc(30000, 1);
+void exec(const char* cmd, signed char* arr){
   int i = 0;
   int stack[3000];
   int sp = 0;
@@ -74,5 +73,4 @@ void exec(char* cmd){
     fprintf(stderr, "No matching ] for [\n");
     exit(1);
   }
-  free(arr);
 }
