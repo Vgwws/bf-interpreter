@@ -15,3 +15,12 @@ A Brainfuck interpreter written in C
    ```sh
    sudo make install
    ```
+   4. Using it
+   For interpreting file:
+   ```sh
+   bf <file>
+   ```
+   For inline execution:
+   ```
+   bf
+   ```
